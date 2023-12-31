@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <script src="library_function.js" defer></script>
+    <link rel="stylesheet" href="library_style.css">
+</head>
+<body>
+    <nav class="sideBar">
+        <dialog id="Book_Form">
+            <form >
+                <li>
+                    <label for="title">Title</label>
+                    <textarea name="title" id="title" cols="30" rows="4"></textarea>
+                </li>
+                <li>
+                    <label for="author">Author</label>
+                    <input type="text" name="author" id="author"/>
+                </li>
+                <li>
+                    <label for="page">No. of Page</label>
+                    <input type="number" name="page" id="page"/>
+                </li>
+                <li>
+                    <fieldset>
+                        <legend>
+                            The book has already been Finished
+                        </legend>
+                        <div class="radio_group">
+                            <li>
+                                <label for="Finished">Yes</label>
+                                <input type="radio" name="Choice" id="Finished" value="Read"/>
+                            </li>
+                            <li>
+                                <label for="NotFinished">No</label>
+                                <input type="radio" name="Choice" id="NotFinished" value="Not Read"/>
+                            </li>
+
+                        </div>
+                     </fieldset>
+                </li>
+                <button value="cancel" formmethod="dialog">Cancel</button>
+                <button type="submit" id='submitBtn' value="default">Submit</button>
+            </form>
+        </dialog>
+        <button>Add Book</button>
+    </nav>
+    <div class="book_container">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="5">Library</th>
+                </tr>
+                <tr>
+                    <td>Title</td>
+                    <td>Author</td>
+                    <td>Page</td>
+                    <td colspan="2">Action</td>
+                </tr>
+            </thead>
+            <tbody id="book">
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

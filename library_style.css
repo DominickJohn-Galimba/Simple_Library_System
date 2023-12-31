@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.book_container {
+    display: grid;
+    align-items: start;
+    justify-content: center;
+    width: inherit;
+    height: 100vh;
+}
+table {
+    width: 55vw;
+    max-width: 24rem;
+}
+table,
+td {
+  border: 1px solid #333;
+
+}
+td > * {
+    width: 100%;
+}
+thead,
+tfoot {
+  background-color: #333;
+  color: #fff;
+}
+thead > tr {
+    text-align: center;
+}
+.sideBar {
+    outline: solid red;
+    height: 100%;
+    width: 200px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 40px;
+    background-color: lightblue;
+    display: grid;
+    grid-template-rows: 0.2fr 1fr; /* Use grid-template-rows instead of shorthand grid property */
+}
+
+.sideBar > button {
+    grid-row: 1;
+    align-self: start;
+    justify-self: center;
+    padding: 0.3rem;
+    position: relative;
+}
+
+nav > dialog {
+    position: absolute;
+    top: 55%;
+    left: 11%;
+    transform: translate(-50%, -50%);
+    /* Additional styles as needed */
+    font-size: small;
+}
+#Book_Form > form {
+    width: 85%;
+    max-width: 12rem;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: small;
+    gap: .4rem;
+    list-style: none;
+    justify-content: center;
+    
+}
+#Book_Form > form > :first-child > label + textarea{
+    width: 100%;
+    margin-left: 0.6rem;
+    text-align: center;
+    display: block;
+}
+
+#Book_Form > form > :nth-child(2) > input {
+    width: 75%;
+}
+#Book_Form > form > :nth-child(3) > input {
+    width: 50%;
+}
+#Book_Form > form > :nth-child(4) > fieldset > legend {
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+}
+#Book_Form > form > :nth-child(4) > fieldset {
+    width: 11rem;
+    margin-left: 1rem;
+}
+.radio_group {
+    display: flex;
+    justify-content: space-evenly;
+}
